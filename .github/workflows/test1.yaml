@@ -25,10 +25,10 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.ALEX_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.ALEX_AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.PNL_GHA_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PNL_GHA_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-          role-to-assume: ${{ secrets.TRUSTING_AWS_ROLE_TO_ASSUME }}
+          role-to-assume: ${{ secrets.ALEXTEST_AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1200
           role-session-name: MySessionTEST1
       - run: |
